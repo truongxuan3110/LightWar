@@ -10,7 +10,6 @@ public class Tower : MonoBehaviour
     private float nextShotTime;
     private void Update()
     {
-        Shoot();
     }
 
     public void Shoot()

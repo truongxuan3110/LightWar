@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 3226534619479389754}
   - component: {fileID: 1035684274477741101}
   - component: {fileID: 2614480506143429374}
+  - component: {fileID: 4497890278670816973}
   - component: {fileID: -3358773822376049266}
   - component: {fileID: -4157891771401564496}
   - component: {fileID: -168150717709648823}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,6 +110,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4497890278670816973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2743322611710415400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 009f708ce9ec60b4694f1859f944c663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 2614480506143429374}
+  currentHealth: 50
+  maxHealth: 50
+  isDead: 0
+  goldToGive: 30
 --- !u!50 &-3358773822376049266
 Rigidbody2D:
   serializedVersion: 4
@@ -200,5 +218,5 @@ MonoBehaviour:
   - {fileID: 552008268864083162, guid: 28739e8f177517c4784ba4cad7c7bd8c, type: 3}
   - {fileID: 4421268565220441286, guid: f2da4f95f8bcdf744bb2bc734c32d7ce, type: 3}
   - {fileID: 7259306990188471445, guid: 970ee7ee92d532347b679fbd9590c720, type: 3}
-  navUpdateTime: 0
+  navTimeUpdate: 0
   currentNavTime: 0

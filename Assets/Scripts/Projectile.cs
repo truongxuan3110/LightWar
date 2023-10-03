@@ -11,12 +11,21 @@ public class Projectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.up * speed;
-        Destroy(gameObject,2f);
+        Destroy(gameObject,1f);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<EnemyHealth>() != null)
+        {
+            EnemyHealth _enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
+            _enemyHealth.TakeDamage(damage);
+            Destroy(gameObject);
+        }
     }
 }
