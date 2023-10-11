@@ -16,4 +16,8 @@ public class MainMenu : MonoBehaviour
         AudioManager.instance.PlaySFX(3);
         Application.Quit();
     }
+    public void ResetLevels()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }
